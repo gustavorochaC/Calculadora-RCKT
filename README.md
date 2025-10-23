@@ -1,5 +1,7 @@
 # 🧮 Calculadora React
 
+<img width="1108" height="729" alt="FOTO" src="https://github.com/user-attachments/assets/4ee60a57-3909-45fe-90a4-d8ae68704724" />
+
 Uma calculadora interativa moderna desenvolvida com React e Tailwind CSS, apresentando design minimalista e histórico de operações.
 
 > ⚠️ **Projeto Visual**: Esta calculadora é apenas uma interface visual para fins de estudo. Não realiza operações matemáticas reais.
