@@ -28,3 +28,6 @@ Uma calculadora interativa moderna desenvolvida com React e Tailwind CSS, aprese
 git clone https://github.com/seu-usuario/calculadora-react.git
 
 # Abra o arquivo index.html no navegador
+
+<img width="891" height="736" alt="image" src="https://github.com/user-attachments/assets/ba87bfb4-f7cc-4bda-9834-02970d0ed40c" />
+
