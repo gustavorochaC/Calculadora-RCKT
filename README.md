@@ -3,9 +3,10 @@
 Uma calculadora interativa moderna desenvolvida com React e Tailwind CSS, apresentando design minimalista e histórico de operações.
 
 > ⚠️ **Projeto Visual**: Esta calculadora é apenas uma interface visual para fins de estudo. Não realiza operações matemáticas reais.
-ink para acesso: https://gustavorochac.github.io/Calculadora-Visual/
 
-<img width="891" height="736" alt="image" src="https://github.com/user-attachments/assets/592de4ba-bb21-4e62-bc04-49899464a3a5" />
+## 🌐 Demo
+
+🔗 **[Ver Projeto Online](https://gustavorochac.github.io/Calculadora-Visual/)**
 
 ## ✨ Features
 
@@ -28,9 +29,8 @@ ink para acesso: https://gustavorochac.github.io/Calculadora-Visual/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/calculadora-react.git
+git clone https://github.com/gustavorochac/Calculadora-Visual.git
 
 # Abra o arquivo index.html no navegador
-
 
 
