@@ -1,38 +1,42 @@
-# 🧮 Calculadora React
+# 🧮 Calculadora React — v2
 
 <img width="1108" height="729" alt="FOTO" src="https://github.com/user-attachments/assets/4ee60a57-3909-45fe-90a4-d8ae68704724" />
 
-Uma calculadora interativa moderna desenvolvida com React e Tailwind CSS, apresentando design minimalista e histórico de operações.
-
-> ⚠️ **Projeto Visual**: Esta calculadora é apenas uma interface visual para fins de estudo. Não realiza operações matemáticas reais.
+Calculadora em React com Tailwind (via CDN). Nesta versão v2, a interface continua igual ao layout anterior, mas agora a calculadora executa operações básicas e tem suporte ao teclado.
 
 ## 🌐 Demo
-
 🔗 **[Ver Projeto Online](https://gustavorochac.github.io/Calculadora-Visual/)**
 
-## ✨ Features
+## 🆕 Novidades da v2
+- Lógica de cálculo implementada (+, -, X, ÷)
+- Vírgula decimal suportada (internamente convertida para ponto)
+- Prevenção/substituição de operadores duplicados
+- Botões CE (apaga último) e C (limpa tudo)
+- Suporte ao teclado: números, + - * / , . Enter (=), Backspace (CE), Esc (C)
+- Exibição da operação e do resultado com normalização (X → *, ÷ → /)
 
-- 🎨 Interface moderna com tema escuro
-- 📱 Design totalmente responsivo
-- 🔢 Layout de operações básicas (+, -, ×, ÷)
-- 📝 Histórico visual de cálculos
-- ⚡ Zero dependências de build
-- 🎭 Componentes reutilizáveis
-- 🎯 **Apenas UI/UX** - Sem lógica de cálculo
+## ✨ Funcionalidades
+- Tema escuro com gradientes e sombras
+- Layout responsivo
+- Grid de botões conforme o design
+- Histórico visual ao lado (estático nesta versão)
 
 ## 🛠️ Tecnologias
-
-- React 18
-- Tailwind CSS v4
-- Babel Standalone
+- React 18 (UMD)
+- Tailwind CSS v4 (browser CDN)
+- Babel Standalone (JSX no navegador)
 - Google Fonts (Rubik)
 
-## 🚀 Como Usar
-
+## 🚀 Como usar
 ```bash
 # Clone o repositório
 git clone https://github.com/gustavorochac/Calculadora-Visual.git
 
 # Abra o arquivo index.html no navegador
+```
+
+Observações:
+- Esta é uma calculadora didática. O histórico mostrado é estático.
+- A vírgula de entrada é convertida para ponto para cálculo e exibida novamente como vírgula no resultado.
 
 
