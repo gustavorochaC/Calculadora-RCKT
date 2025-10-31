@@ -5,7 +5,7 @@
 Calculadora em React com Tailwind (via CDN). Nesta versão v2, a interface continua igual ao layout anterior, mas agora a calculadora executa operações básicas e tem suporte ao teclado.
 
 ## 🌐 Demo
-🔗 **[Ver Projeto Online](https://gustavorochac.github.io/Calculadora-Visual/)**
+🔗 **[Ver Projeto Online](https://gustavorochac.github.io/Calculadora-RCKT/)**
 
 ## 🆕 Novidades da v2
 - Lógica de cálculo implementada (+, -, X, ÷)
@@ -30,7 +30,7 @@ Calculadora em React com Tailwind (via CDN). Nesta versão v2, a interface conti
 ## 🚀 Como usar
 ```bash
 # Clone o repositório
-git clone https://github.com/gustavorochac/Calculadora-Visual.git
+git clone https://github.com/gustavorochac/Calculadora-RCKT.git
 
 # Abra o arquivo index.html no navegador
 ```
