@@ -146,6 +146,24 @@
         ]
       ];
 
+    const CalculatorContext = React.createContext();
+    function CalculatorProvider({ children }) {
+      const [ history, sethistory] = React.useState([]);
+
+      function updateHistory(operation, parsedResult) {
+        sethistory((prev) => [...prev, `${operation}=${parsedResult}`])
+      }
+
+      return(
+        <CalculatorContext.Provider
+        value={{history, updateHistory}}
+        >
+          {children}
+        </CalculatorContext.Provider>
+      )
+    }
+      
+
     function CalculatorDisplay ({ operation, result }){
       return (
       <div className={`
@@ -172,6 +190,7 @@
     function Calculator(){
       const [operation, setOperation] = React.useState('');
       const [result, setResult] = React.useState('');
+      const { updateHistory } = React.useContext(CalculatorContext)
 
 
       function handleInputClick(input){
@@ -190,6 +209,7 @@
           const operationResult = eval(operation.replace(/,/g, '.'));
           const parseResult = operationResult.toString()?.replace(/\./g, ',')
           setResult(parseResult);
+          updateHistory(operation, parseResult);
           return;
         }
 
@@ -246,6 +266,8 @@
     }
 
     function OperationHistory () {
+      const { history } = React.useContext(CalculatorContext);
+
       return (
         <Card className="w-full py-10 px-8"> 
           <Text
@@ -256,12 +278,23 @@
             Historico de Operações
           </Text>
 
-          <ul className="flex flex-col gap-3">
-            <Text as="li"> 1 + 1 = 2</Text>  
-            <Text as="li"> 1 + 2 + 3 = 6</Text>
-            <Text as="li"> 1 + 4 = 4</Text>
-          </ul>
+          {history.length > 0 ? 
+            (
+              <ul className="flex flex-col gap-3">
+                {history.map((value, index) =>
+                <Text key={`item-${index}`} as="li">
+                  {value}
+                </Text>
+                )}
+              </ul>
+            ) : (
+               <Text as ="p" variant="muted"> 
+                Nenhuma Operação Recente
+              </Text>
+            )
+          }
         </Card>
+
       )
     }
 
@@ -275,8 +308,10 @@
             gap-2
             
         `}>
+        <CalculatorProvider>
           <Calculator />
           <OperationHistory />
+        </CalculatorProvider>
         </main>
       )
     }
