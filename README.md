@@ -2,29 +2,37 @@
 
 <img width="1108" height="729" alt="FOTO" src="https://github.com/user-attachments/assets/4ee60a57-3909-45fe-90a4-d8ae68704724" />
 
-Calculadora em React com Tailwind (via CDN). Nesta versão v2, a interface continua igual ao layout anterior, mas agora a calculadora executa operações básicas e tem suporte ao teclado.
+Calculadora em React (via UMD) com Tailwind no navegador. Mantém a estética do layout e agora possui histórico dinâmico usando Context API.
 
 ## 🌐 Demo
 🔗 **[Ver Projeto Online](https://gustavorochac.github.io/Calculadora-RCKT/)**
 
-## 🆕 Novidades da v2
-- Lógica de cálculo implementada (+, -, X, ÷)
-- Vírgula decimal suportada (internamente convertida para ponto)
-- Prevenção/substituição de operadores duplicados
-- Botões CE (apaga último) e C (limpa tudo)
-- Suporte ao teclado: números, + - * / , . Enter (=), Backspace (CE), Esc (C)
-- Exibição da operação e do resultado com normalização (X → *, ÷ → /)
+## 🆕 O que há de novo nesta versão
+- Context API para compartilhar o histórico entre componentes
+- Histórico dinâmico: cada “=” adiciona `operação=resultado`
+- Mensagem “Nenhuma Operação Recente” quando não há histórico
+- Botões:
+  - C → limpa tudo
+  - CE → apaga o último caractere da operação
+  - = → calcula a expressão atual
+- Entrada com vírgula: converte `,` para `.` para calcular e volta a exibir com `,`
+- Continuidade após resultado:
+  - Se digitar número, inicia nova operação
+  - Se clicar operador, continua a partir do resultado anterior
+- Layout responsivo preservado
 
 ## ✨ Funcionalidades
+- Operações básicas: `+`, `-`, `*`, `/`
+- Display com operação (linha superior) e resultado (linha principal)
+- Histórico renderizado em lista ao lado (usa Context API)
 - Tema escuro com gradientes e sombras
-- Layout responsivo
-- Grid de botões conforme o design
-- Histórico visual ao lado (estático nesta versão)
+- Google Font Rubik aplicada ao projeto
 
 ## 🛠️ Tecnologias
 - React 18 (UMD)
+- ReactDOM 18 (UMD)
+- Babel Standalone (JSX direto no navegador)
 - Tailwind CSS v4 (browser CDN)
-- Babel Standalone (JSX no navegador)
 - Google Fonts (Rubik)
 
 ## 🚀 Como usar
@@ -32,11 +40,19 @@ Calculadora em React com Tailwind (via CDN). Nesta versão v2, a interface conti
 # Clone o repositório
 git clone https://github.com/gustavorochac/Calculadora-RCKT.git
 
-# Abra o arquivo index.html no navegador
+# Abra o arquivo index.html no navegador (duplo clique ou:
+# Windows)
+start index.html
 ```
 
-Observações:
-- Esta é uma calculadora didática. O histórico mostrado é estático.
-- A vírgula de entrada é convertida para ponto para cálculo e exibida novamente como vírgula no resultado.
+## 🧩 Principais componentes
+- Calculator: lógica de entrada, cálculo e grid de botões
+- CalculatorDisplay: exibe operação e resultado
+- OperationHistory: lista o histórico de operações
+- CalculatorContext/Provider: mantém o histórico em memória
+
+## ⚠️ Observações
+- Projeto com fins didáticos. A avaliação da expressão usa `eval` após normalização; não utilize este método com entradas não confiáveis em produção.
+- O histórico é volátil (memória) e se perde ao recarregar a página.
 
 
