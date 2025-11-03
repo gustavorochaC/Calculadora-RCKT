@@ -1,6 +1,7 @@
 # 🧮 Calculadora React — v2
 
-<img width="1108" height="729" alt="FOTO" src="https://github.com/user-attachments/assets/4ee60a57-3909-45fe-90a4-d8ae68704724" />
+<img width="1530" height="763" alt="Screenshot_1" src="https://github.com/user-attachments/assets/a94a3575-26b2-41da-bb14-49d3db65cd02" />
+
 
 Calculadora em React (via UMD) com Tailwind no navegador. Mantém a estética do layout e agora possui histórico dinâmico usando Context API.
 
